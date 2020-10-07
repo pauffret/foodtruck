@@ -1,19 +1,3 @@
-
-// Les coordonnées 1, 2 et 3
-// 1 Paris près place Vendôme
-// 2 Marseille
-// 3 St Denis Basilique
-var la1 = 48.866667;
-var ln1 = 2.333333;
-
-var la2 = 43.296482;
-var ln2 = 5.3697799;
-
-var la3 = 48.935459;
-var ln3 = 2.359835;
-
-
-// Fonction 1 - La Terre est ronde (si j'te jure)
 function getDistanceFromLatLonInKm(lat1,lng1,lat2,lng2) {
     var R = 6371; // Radius of the earth in km
     var dLat = deg2rad(lat2-lat1);  // deg2rad below
@@ -31,4 +15,4 @@ function getDistanceFromLatLonInKm(lat1,lng1,lat2,lng2) {
 function deg2rad(deg) {
     return (deg * Math.PI)/180
 }
-console.log(getDistanceFromLatLonInKm(la1,ln1,la3,ln3));
+module.exports = {getDistanceFromLatLonInKm};
